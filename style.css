@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section,
+.resume-section {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    background: #fefefe;
+}
+
+h1 {
+    color: #007acc;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* Resume Styles */
+.resume {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume header h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.resume header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.resume .photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.resume section {
+    margin-bottom: 20px;
+}
+
+.resume section h2 {
+    color: #007acc;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.resume ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.resume ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Resume Download Button */
+.resume-section {
+    margin-top: 50px;
+}
+#download-btn {
+    display: block;
+    margin: 20px auto 0;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#download-btn:hover {
+    background-color: #005fa3;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #1e293b; /* Dark background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #38bdf8; /* Light blue links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0ea5e9; /* Brighter blue on hover */
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
