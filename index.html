@@ -32,7 +32,16 @@
 
                 <label for="education">Education:</label>
                 <textarea id="education" placeholder="Describe your educational background"></textarea>
-                
+
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname">
+
+                <label for="github">GitHub Profile:</label>
+                <input type="url" id="github" placeholder="https://github.com/yourname">
+
+                <label for="portfolio">Portfolio Website:</label>
+                <input type="url" id="portfolio" placeholder="https://yourportfolio.com">
+
                 <label for="image">Upload Photo:</label>
                 <input type="file" id="image" accept="image/*">
 
@@ -51,6 +60,7 @@
                     <p id="resume-role">Your Role</p>
                     <p id="resume-contact">Your Contact Info</p>
                 </header>
+                <hr>
                 <section class="profile">
                     <h2>Profile</h2>
                     <p id="resume-profile">Your profile summary will appear here.</p>
@@ -67,16 +77,18 @@
                     <h2>Education</h2>
                     <p id="resume-education">Your educational background will appear here.</p>
                 </section>
-                    
+                <section class="social">
+                    <h2>Social Profiles</h2>
+                    <ul id="resume-social"></ul>
+                </section>
             </div>
-                                <!-- Resume Download Button -->
-                                <div class="resume-section">
-                                    <button id="download-btn">Download Resume</button>
-                                </div>
+            <!-- Resume Download Button -->
+            <div class="resume-section">
+                <button id="download-btn">Download Resume</button>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script  src="script.js"></script>
-
 </body>
 </html>
