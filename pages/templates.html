@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates - Resume Builder</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/templates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span>ResumeBuilder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html" class="active">Templates</a></li>
+                <li><a href="builder.html">Build Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Templates Section -->
+    <section class="templates-hero">
+        <div class="container">
+            <h1>Choose Your Perfect Template</h1>
+            <p>Select from our professionally designed resume templates</p>
+        </div>
+    </section>
+
+    <section class="templates-section">
+        <div class="container">
+            <div class="templates-grid">
+                <!-- Template 1: Professional -->
+                <div class="template-card">
+                    <div class="template-image">
+                        <div class="template-preview-large professional-template">
+                            <div class="preview-header"></div>
+                            <div class="preview-content">
+                                <div class="preview-line"></div>
+                                <div class="preview-line short"></div>
+                                <div class="preview-line"></div>
+                                <div class="preview-line medium"></div>
+                            </div>
+                        </div>
+                        <div class="template-overlay">
+                            <button class="btn btn-view" onclick="viewTemplate('professional')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-use" onclick="useTemplate('professional')">
+                                <i class="fas fa-check"></i> Use Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Professional</h3>
+                        <p>Clean and modern design perfect for corporate roles</p>
+                        <div class="template-tags">
+                            <span class="tag">Modern</span>
+                            <span class="tag">Corporate</span>
+                            <span class="tag">ATS-Friendly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 2: Creative -->
+                <div class="template-card">
+                    <div class="template-image">
+                        <div class="template-preview-large creative-template">
+                            <div class="preview-sidebar"></div>
+                            <div class="preview-content">
+                                <div class="preview-line"></div>
+                                <div class="preview-line short"></div>
+                                <div class="preview-line"></div>
+                                <div class="preview-line medium"></div>
+                            </div>
+                        </div>
+                        <div class="template-overlay">
+                            <button class="btn btn-view" onclick="viewTemplate('creative')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-use" onclick="useTemplate('creative')">
+                                <i class="fas fa-check"></i> Use Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Creative</h3>
+                        <p>Stand out with a vibrant and colorful design</p>
+                        <div class="template-tags">
+                            <span class="tag">Colorful</span>
+                            <span class="tag">Creative</span>
+                            <span class="tag">Eye-catching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 3: Minimalist -->
+                <div class="template-card">
+                    <div class="template-image">
+                        <div class="template-preview-large minimalist-template">
+                            <div class="preview-content">
+                                <div class="preview-line"></div>
+                                <div class="preview-line short"></div>
+                                <div class="preview-line"></div>
+                                <div class="preview-line medium"></div>
+                            </div>
+                        </div>
+                        <div class="template-overlay">
+                            <button class="btn btn-view" onclick="viewTemplate('minimalist')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                            <button class="btn btn-use" onclick="useTemplate('minimalist')">
+                                <i class="fas fa-check"></i> Use Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Minimalist</h3>
+                        <p>Simple and elegant design that highlights content</p>
+                        <div class="template-tags">
+                            <span class="tag">Simple</span>
+                            <span class="tag">Elegant</span>
+                            <span class="tag">Clean</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Preview Modal -->
+    <div class="modal" id="template-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modal-body">
+                <!-- Template preview will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+                <button class="btn btn-primary" id="modal-use-btn">Use This Template</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ResumeBuilder</h3>
+                <p>Create professional resumes that get you hired.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="builder.html">Build Resume</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ResumeBuilder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/templates.js"></script>
+</body>
+</html>

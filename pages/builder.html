@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Resume - Resume Builder</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/builder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span>ResumeBuilder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="builder.html" class="active">Build Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="builder-container">
+        <!-- Progress Steps -->
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span>Personal Info</span>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span>Experience</span>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span>Education</span>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span>Skills</span>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-circle">5</div>
+                    <span>Preview</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Form Section -->
+            <div class="form-section">
+                <form id="resume-form">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h2><i class="fas fa-user"></i> Personal Information</h2>
+                        <div class="form-group">
+                            <label for="photo">Profile Photo</label>
+                            <div class="photo-upload">
+                                <div class="photo-preview" id="photo-preview">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Upload Photo</span>
+                                </div>
+                                <input type="file" id="photo" accept="image/*">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="title">Professional Title *</label>
+                            <input type="text" id="title" required placeholder="Software Developer">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required placeholder="john.doe@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" required placeholder="+1 (555) 123-4567">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" placeholder="New York">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" placeholder="USA">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="summary">Professional Summary *</label>
+                            <textarea id="summary" rows="4" required placeholder="Write a brief summary about yourself, your experience, and your career goals..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Social Links</label>
+                            <div class="social-input">
+                                <i class="fab fa-linkedin"></i>
+                                <input type="url" id="linkedin" placeholder="LinkedIn Profile URL">
+                            </div>
+                            <div class="social-input">
+                                <i class="fab fa-github"></i>
+                                <input type="url" id="github" placeholder="GitHub Profile URL">
+                            </div>
+                            <div class="social-input">
+                                <i class="fas fa-globe"></i>
+                                <input type="url" id="website" placeholder="Portfolio Website URL">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Experience -->
+                    <div class="form-step" data-step="2">
+                        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                        <div id="experience-container">
+                            <div class="experience-item">
+                                <div class="form-group">
+                                    <label>Job Title *</label>
+                                    <input type="text" class="exp-title" placeholder="Senior Software Engineer" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Company *</label>
+                                        <input type="text" class="exp-company" placeholder="Tech Corp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" class="exp-location" placeholder="San Francisco, CA">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Start Date</label>
+                                        <input type="month" class="exp-start">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>End Date</label>
+                                        <input type="month" class="exp-end">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" class="exp-current"> Currently working here
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="exp-description" rows="3" placeholder="Describe your responsibilities and achievements..." required></textarea>
+                                </div>
+                                <button type="button" class="btn-remove" onclick="removeExperience(this)">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add" id="add-experience">
+                            <i class="fas fa-plus"></i> Add Experience
+                        </button>
+                    </div>
+
+                    <!-- Step 3: Education -->
+                    <div class="form-step" data-step="3">
+                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div id="education-container">
+                            <div class="education-item">
+                                <div class="form-group">
+                                    <label>Degree *</label>
+                                    <input type="text" class="edu-degree" placeholder="Bachelor of Science in Computer Science" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>School/University *</label>
+                                        <input type="text" class="edu-school" placeholder="University of Technology" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" class="edu-location" placeholder="Boston, MA">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Start Date</label>
+                                        <input type="month" class="edu-start">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>End Date</label>
+                                        <input type="month" class="edu-end">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="edu-description" rows="2" placeholder="Honors, activities, coursework..."></textarea>
+                                </div>
+                                <button type="button" class="btn-remove" onclick="removeEducation(this)">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add" id="add-education">
+                            <i class="fas fa-plus"></i> Add Education
+                        </button>
+                    </div>
+
+                    <!-- Step 4: Skills -->
+                    <div class="form-step" data-step="4">
+                        <h2><i class="fas fa-code"></i> Skills & Languages</h2>
+
+                        <div class="form-group">
+                            <label>Skills</label>
+                            <div class="skills-input-container">
+                                <input type="text" id="skill-input" placeholder="Add a skill and press Enter">
+                                <div class="skills-list" id="skills-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Languages</label>
+                            <div id="language-container">
+                                <div class="language-item">
+                                    <div class="form-row">
+                                        <input type="text" class="lang-name" placeholder="Language">
+                                        <select class="lang-level">
+                                            <option value="Native">Native</option>
+                                            <option value="Fluent">Fluent</option>
+                                            <option value="Professional">Professional</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Basic">Basic</option>
+                                        </select>
+                                        <button type="button" class="btn-icon" onclick="removeLanguage(this)">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-small" id="add-language">
+                                <i class="fas fa-plus"></i> Add Language
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Certifications</label>
+                            <div id="certification-container">
+                                <div class="certification-item">
+                                    <input type="text" class="cert-name" placeholder="Certification name">
+                                    <div class="form-row">
+                                        <input type="text" class="cert-issuer" placeholder="Issued by">
+                                        <input type="month" class="cert-date" placeholder="Date">
+                                        <button type="button" class="btn-icon" onclick="removeCertification(this)">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-add-small" id="add-certification">
+                                <i class="fas fa-plus"></i> Add Certification
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Preview -->
+                    <div class="form-step" data-step="5">
+                        <h2><i class="fas fa-eye"></i> Choose Template</h2>
+                        <div class="template-selector">
+                            <div class="template-option" data-template="professional">
+                                <div class="template-preview template-1"></div>
+                                <h3>Professional</h3>
+                                <p>Clean and modern design</p>
+                            </div>
+                            <div class="template-option selected" data-template="creative">
+                                <div class="template-preview template-2"></div>
+                                <h3>Creative</h3>
+                                <p>Stand out with color</p>
+                            </div>
+                            <div class="template-option" data-template="minimalist">
+                                <div class="template-preview template-3"></div>
+                                <h3>Minimalist</h3>
+                                <p>Simple and elegant</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prev-btn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary" id="next-btn">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="button" class="btn btn-success" id="preview-btn" style="display: none;">
+                            <i class="fas fa-eye"></i> Preview & Download
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Live Preview Section -->
+            <div class="preview-section">
+                <div class="preview-header">
+                    <h3>Live Preview</h3>
+                    <button type="button" class="btn-icon" id="toggle-preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="preview-container" id="preview-container">
+                    <p class="preview-placeholder">Fill in the form to see your resume preview</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/builder.js"></script>
+</body>
+</html>

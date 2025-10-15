@@ -3,92 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="refresh" content="0; url=pages/index.html">
+    <title>Resume Builder - Redirecting...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- Form Section -->
-        <div class="form-section">
-            <h1>Resume Builder</h1>
-            <form id="resume-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Enter your name" required>
-
-                <label for="role">Role:</label>
-                <input type="text" id="role" placeholder="Enter your role" required>
-
-                <label for="contact">Contact Info:</label>
-                <input type="text" id="contact" placeholder="Enter your contact details" required>
-
-                <label for="profile">Profile Summary:</label>
-                <textarea id="profile" placeholder="Write a brief summary about yourself" required></textarea>
-
-                <label for="skills">Skills (comma-separated):</label>
-                <input type="text" id="skills" placeholder="e.g., JavaScript, React, Python" required>
-
-                <label for="experience">Experience:</label>
-                <textarea id="experience" placeholder="Describe your past work experience"></textarea>
-
-                <label for="education">Education:</label>
-                <textarea id="education" placeholder="Describe your educational background"></textarea>
-
-                <label for="linkedin">LinkedIn Profile:</label>
-                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname">
-
-                <label for="github">GitHub Profile:</label>
-                <input type="url" id="github" placeholder="https://github.com/yourname">
-
-                <label for="portfolio">Portfolio Website:</label>
-                <input type="url" id="portfolio" placeholder="https://yourportfolio.com">
-
-                <label for="image">Upload Photo:</label>
-                <input type="file" id="image" accept="image/*">
-
-                <button type="submit">Generate Resume</button>
-            </form>
-        </div>
-
-        <!-- Resume Preview Section -->
-        <div class="resume-section">
-            <div class="resume" id="resume">
-                <header>
-                    <div class="photo">
-                        <img id="resume-image" src="#" alt="Profile Picture" style="display: none;">
-                    </div>
-                    <h1 id="resume-name">Your Name</h1>
-                    <p id="resume-role">Your Role</p>
-                    <p id="resume-contact">Your Contact Info</p>
-                </header>
-                <hr>
-                <section class="profile">
-                    <h2>Profile</h2>
-                    <p id="resume-profile">Your profile summary will appear here.</p>
-                </section>
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <ul id="resume-skills"></ul>
-                </section>
-                <section class="experience">
-                    <h2>Experience</h2>
-                    <p id="resume-experience">Your work experience will appear here.</p>
-                </section>
-                <section class="education">
-                    <h2>Education</h2>
-                    <p id="resume-education">Your educational background will appear here.</p>
-                </section>
-                <section class="social">
-                    <h2>Social Profiles</h2>
-                    <ul id="resume-social"></ul>
-                </section>
-            </div>
-            <!-- Resume Download Button -->
-            <div class="resume-section">
-                <button id="download-btn">Download Resume</button>
-            </div>
-        </div>
+        <h1>Resume Builder</h1>
+        <p>Redirecting to the new application...</p>
+        <div class="spinner"></div>
+        <p style="margin-top: 2rem; font-size: 1rem;">
+            If you are not redirected, <a href="pages/index.html">click here</a>
+        </p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script  src="script.js"></script>
+    <script>
+        // Immediate redirect as backup
+        setTimeout(() => {
+            window.location.href = 'pages/index.html';
+        }, 100);
+    </script>
 </body>
 </html>

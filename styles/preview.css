@@ -1,0 +1,525 @@
+/* ========== Preview Page ========== */
+.preview-page {
+    min-height: 100vh;
+    background: var(--background-alt);
+    padding: 2rem;
+}
+
+.preview-actions {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+.template-switch {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--background-alt);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+}
+
+.template-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: transparent;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-dark);
+}
+
+.template-btn:hover {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.template-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.resume-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-xl);
+}
+
+#resume-container {
+    background: white;
+}
+
+/* ========== Professional Template ========== */
+.resume-professional {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.resume-professional .resume-header {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    padding: 2rem;
+    margin: -3rem -3rem 2rem;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+}
+
+.resume-professional .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.resume-professional .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-professional .name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.resume-professional .title {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 1rem;
+}
+
+.resume-professional .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.resume-professional .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resume-professional .section {
+    margin-bottom: 2rem;
+}
+
+.resume-professional .section-title {
+    font-size: 1.5rem;
+    color: #2563eb;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.resume-professional .summary-text {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.resume-professional .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.resume-professional .skill-item {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.resume-professional .experience-item,
+.resume-professional .education-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.resume-professional .experience-item:last-child,
+.resume-professional .education-item:last-child {
+    border-bottom: none;
+}
+
+.resume-professional .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 0.5rem;
+}
+
+.resume-professional .item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.resume-professional .item-company {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.resume-professional .item-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.resume-professional .item-description {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.resume-professional .languages-list,
+.resume-professional .certifications-list {
+    list-style: none;
+}
+
+.resume-professional .language-item,
+.resume-professional .certification-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.resume-professional .social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.resume-professional .social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resume-professional .social-link:hover {
+    color: #1e40af;
+}
+
+/* ========== Creative Template ========== */
+.resume-creative {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 0;
+    font-family: 'Arial', sans-serif;
+    margin: -3rem;
+}
+
+.resume-creative .sidebar {
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.resume-creative .main-content {
+    padding: 3rem 2rem;
+    background: white;
+}
+
+.resume-creative .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+}
+
+.resume-creative .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-creative .name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.resume-creative .title {
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.resume-creative .sidebar .section {
+    margin-bottom: 2rem;
+}
+
+.resume-creative .sidebar .section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.resume-creative .contact-item {
+    display: flex;
+    align-items: start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.resume-creative .contact-item i {
+    margin-top: 0.25rem;
+}
+
+.resume-creative .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.resume-creative .skill-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.resume-creative .main-content .section {
+    margin-bottom: 2rem;
+}
+
+.resume-creative .main-content .section-title {
+    font-size: 1.5rem;
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.resume-creative .experience-item,
+.resume-creative .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.resume-creative .item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.resume-creative .item-company {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.resume-creative .item-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-creative .item-description {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* ========== Minimalist Template ========== */
+.resume-minimalist {
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    color: #1e293b;
+}
+
+.resume-minimalist .resume-header {
+    border-bottom: 3px solid #1e293b;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.resume-minimalist .name {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.resume-minimalist .title {
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.resume-minimalist .contact-info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.resume-minimalist .section {
+    margin-bottom: 2rem;
+}
+
+.resume-minimalist .section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.resume-minimalist .summary-text {
+    color: #64748b;
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+.resume-minimalist .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resume-minimalist .skill-item {
+    color: #1e293b;
+    font-weight: 600;
+    position: relative;
+}
+
+.resume-minimalist .skill-item::after {
+    content: '•';
+    position: absolute;
+    right: -0.75rem;
+}
+
+.resume-minimalist .skill-item:last-child::after {
+    content: '';
+}
+
+.resume-minimalist .experience-item,
+.resume-minimalist .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.resume-minimalist .item-header {
+    margin-bottom: 0.5rem;
+}
+
+.resume-minimalist .item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.resume-minimalist .item-company {
+    color: #64748b;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.resume-minimalist .item-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.resume-minimalist .item-description {
+    color: #64748b;
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+    .navbar,
+    .preview-actions {
+        display: none;
+    }
+
+    .resume-wrapper {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .preview-page {
+        background: white;
+        padding: 0;
+    }
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .preview-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .template-switch {
+        order: -1;
+        justify-content: center;
+    }
+
+    .resume-wrapper {
+        padding: 1.5rem;
+    }
+
+    .resume-creative {
+        grid-template-columns: 1fr;
+        margin: -1.5rem;
+    }
+
+    .resume-creative .sidebar {
+        padding: 2rem 1.5rem;
+    }
+
+    .resume-creative .main-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .resume-professional .resume-header {
+        margin: -1.5rem -1.5rem 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .resume-professional .name {
+        font-size: 2rem;
+    }
+
+    .resume-minimalist .name {
+        font-size: 2rem;
+    }
+
+    .resume-professional .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}

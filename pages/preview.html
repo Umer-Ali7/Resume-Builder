@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview - Resume Builder</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/preview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span>ResumeBuilder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="builder.html">Build Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="preview-page">
+        <div class="preview-actions">
+            <button class="btn btn-secondary" onclick="window.location.href='builder.html'">
+                <i class="fas fa-arrow-left"></i> Edit Resume
+            </button>
+            <div class="template-switch">
+                <button class="template-btn active" data-template="professional">Professional</button>
+                <button class="template-btn" data-template="creative">Creative</button>
+                <button class="template-btn" data-template="minimalist">Minimalist</button>
+            </div>
+            <button class="btn btn-primary" id="download-pdf">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+        </div>
+
+        <!-- Resume Container -->
+        <div class="resume-wrapper">
+            <div id="resume-container">
+                <!-- Resume will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/preview.js"></script>
+    <script src="../scripts/templates-render.js"></script>
+</body>
+</html>
